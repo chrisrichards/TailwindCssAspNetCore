@@ -1,18 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [
+  content: [
     './Pages/**/*.cshtml',
     './Pages/**/*.html',
     './Pages/**/*.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["Inter var", ...defaultTheme.fontFamily.sans],
+      }
+    },
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/ui')
+    // eslint-disable-next-line global-require
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
   ],
 }
