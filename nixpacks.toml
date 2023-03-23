@@ -1,4 +1,0 @@
-providers = ["node", "..."]
-
-[phases.install]
-cmds = ["npm install ./src/web", "..."]
