@@ -9,6 +9,7 @@ RUN apt-get install -y nodejs
 COPY . ./
 # Restore as distinct layers
 RUN dotnet restore
+RUN npm install
 # Build and publish a release
 RUN dotnet publish -c Release -o /app --no-restore ./src/web/TailwindCssAspNetCore.Web.csproj
 

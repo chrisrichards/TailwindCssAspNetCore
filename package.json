@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "tailwind-css-asp-net-core": "file:src/web"
+  }
+}
